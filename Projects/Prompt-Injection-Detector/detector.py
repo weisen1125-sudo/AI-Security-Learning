@@ -36,3 +36,12 @@ if findings:
         print("-", item)
 else:
     print("No suspicious patterns found.")
+
+if __name__ == "__main__":
+
+    test_input = input("Enter prompt: ")
+
+    risk, findings = detect_prompt_injection(test_input)
+
+    print("\nRisk Level:", risk)
+    print("Detected Patterns:", findings)
